@@ -16,6 +16,6 @@ Open Novita page
    ${spacename}=   Get Text    XPath:/html/body/main/section[2]/div/div/header/h2
    Click Button   XPath:/html/body/header/div/button[2]
    Input Text    XPath://*[@id="predictive-search-field"]    ${spacename}
-   Sleep   5s 
+   Sleep   3s 
 
    
