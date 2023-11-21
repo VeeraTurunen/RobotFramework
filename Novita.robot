@@ -9,13 +9,8 @@ Resource            keywords.robot
 *** Test Cases ***
 Open Novita page
    Open Url With Chrome            ${NOVITA_URL}    
-
-   #copy&paste-testi palikkatyyliin
-   Click Button   XPath:/html/body/dialog[2]/div/div/button
-   Sleep    2s
-   ${spacename}=   Get Text    XPath:/html/body/main/section[2]/div/div/header/h2
-   Click Button   XPath:/html/body/header/div/button[2]
-   Input Text    XPath://*[@id="predictive-search-field"]    ${spacename}
-   Sleep   3s 
-
-   
+   Choose Instructions
+   Read Yarn and Needles
+   Choose Yarn
+   Click Product To Shopping Basket
+   Choose Other Yarn
