@@ -7,13 +7,13 @@ Resource            keywords.robot
 
 
 *** Test Cases ***
-Open Novita page
+Open Novita page 1
    Open Url With Chrome            ${NOVITA_URL}    
    #Pitka sleep etta kaikki pop-upit ilmestyy, wait element odottaa vain 5 sec. 
-   Sleep    10s
-   #Click Allow All Cookies And Select Currency; EI LUULTAVASTI TARVITSE KAIKILLE KAYTTAJILLE  
-   Click Button   XPath:/html/body/div[1]/div/div[4]/div[1]/div[2]/button[4]
+   Sleep    15s
+   #Click Allow All Cookies And Select Currency; EI LUULTAVASTI TARVITSE KAIKILLE KAYTTAJILLE    
    Click Button   XPath:/html/body/dialog[2]/div/div/button
+   Click Button   XPath:/html/body/div[1]/div/div[4]/div[1]/div[2]/button[4]
 
 Robinin testi
    #paina mitä etsit
@@ -29,13 +29,21 @@ Robinin testi
    #katsele 2s
    Sleep    2s
    #Valitse ensimmäinen ohje
-   Click Element   XPath:/html/body/main/div/div/div/div/div[3]/div/div/div[2]/div[1]
+   Click Element   XPath:/html/body/main/div/div/div/div/div[3]/div/div/div[2]/div[2]
    #Ei voida tulostaa ohjetta koska ei olla tilaajia
+Tulosta ohje
+   Sleep    3s
+   #Valitse ensimmäinen ohje
+   Click Button   XPath:/html/body/main/section[1]/div[2]/div[6]/div/div[2]/div[2]/div[2]/button
+   Sleep    3s
 
-
-
-   #ihastelen onnistumistani 10 sekuntia ennen muita testejä
-   Sleep    10s
+Open Novita page 2
+   Open Url With Chrome            ${NOVITA_URL}    
+   #Pitka sleep etta kaikki pop-upit ilmestyy, wait element odottaa vain 5 sec. 
+   Sleep    15s
+   #Click Allow All Cookies And Select Currency; EI LUULTAVASTI TARVITSE KAIKILLE KAYTTAJILLE    
+   Click Button   XPath:/html/body/dialog[2]/div/div/button
+   Click Button   XPath:/html/body/div[1]/div/div[4]/div[1]/div[2]/button[4]
 
 Tyttojen testi
    Choose Instructions
