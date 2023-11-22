@@ -24,3 +24,10 @@ Open Novita page
    Check Basket And Remove Item
    Look For Different Needles
    Go To Checkout And Input Info
+
+
+
+
+
+   
+  
