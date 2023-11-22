@@ -57,3 +57,45 @@ Choose Other Yarn
     Input Text    xpath=//*[@id="predictive-search-field"]     7 veljestä
     Press Keys    xpath=//*[@id="predictive-search-field"]      RETURN
     # jatkuu tästä lisäämällä uusi tuote ostoskoriin tms
+
+Look For An Item Searchbox
+    #Etsi puikot
+    Click Button   XPath:/html/body/header/div/button[2]
+    Input Text    XPath://*[@id="predictive-search-field"]   Novita sukkapuikot 20 cm 10.0 mm
+    Press Keys    None      ENTER
+    # Lisaa tuote ostoskoriin (Ei joskus toimi ilman sleep)
+    #Sleep    2s
+    Wait Until Element is visible    XPath:/html/body/main/div/div/div/div/div[2]/div/div/div[2]/article[1]/div[3]/a/h2
+    Click Element    XPath:/html/body/main/div/div/div/div/div[2]/div/div/div[2]/article[1]/div[3]/a/h2
+    Wait Until Element is visible    XPath:/html/body/main/section[1]/div[2]/div[3]/div[2]/form/button
+    Click Button    XPath:/html/body/main/section[1]/div[2]/div[3]/div[2]/form/button
+Check Basket And Remove Item
+    #Poista juuri lisatty tuote
+    Click Element    XPath:/html/body/header/div/div/div/button
+    Wait Until Element is visible    XPath:/html/body/dialog[1]/div[2]/a
+    Click Element    XPath:/html/body/dialog[1]/div[2]/a  
+    Wait Until Element is visible    XPath:/html/body/main/section/div/div[1]/div/div/div[2]/div[2]/form/button
+    Click Element    XPath:/html/body/main/section/div/div[1]/div/div/div[2]/div[2]/form/button
+Look For Different Needles
+    #Hae toiset puikot ylapalkista ja
+    Mouse Over    XPath:/html/body/header/div/nav/ul/li[1]/button
+    Sleep    2s
+    Wait Until Element Is Visible    XPath:/html/body/header/div/nav/ul/li[1]/div[1]/div/div[1]/div[1]/ul/li[2]/a
+    Click Element    XPath:/html/body/header/div/nav/ul/li[1]/div[1]/div/div[1]/div[1]/ul/li[2]/a
+    Wait Until Element Is Visible    XPath:/html/body/main/div/div/div/div[2]/article[4]/div[3]/a
+    Click Element    XPath:/html/body/main/div/div/div/div[2]/article[4]/div[3]/a
+    Wait Until Element Is Visible    XPath:/html/body/main/div/div/div/div[2]/article[4]/div[3]/a
+    Sleep    3s
+    Click Button    XPath:/html/body/main/section[1]/div[2]/div[3]/div[2]/form/button
+
+Go To Checkout And Input Info
+    #Ostoskoriin ja kassalle
+    Wait Until Element Is Visible    XPath:/html/body/dialog[1]/div[2]/a
+    Click Element    XPath:/html/body/dialog[1]/div[2]/a
+    Wait Until Element Is Visible    XPath:/html/body/main/section/div/div[2]/form/button
+    Click Button    XPath:/html/body/main/section/div/div[2]/form/button
+    #Kirjoita email
+    Wait Until Element Is Visible    XPath://*[@id="email"]
+    Input Text    XPath://*[@id="email"]    uli uu
+    Sleep    2s
+    
